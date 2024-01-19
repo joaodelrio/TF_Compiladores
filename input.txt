@@ -1,0 +1,4 @@
+int Gafa(){
+    print("Heçpp");
+    return 10;
+}
