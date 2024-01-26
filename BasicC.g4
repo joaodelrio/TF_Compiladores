@@ -1,5 +1,7 @@
 grammar BasicC;
 
+// TYPECAST
+
 prog : line+
      ;
 
@@ -9,11 +11,12 @@ line : atrib EOL
      | controlflow
      | loop
      | function
+     | lib
      ;
 
 atrib: VAR '=' expr #VariavelExistente
      | TYPE=(INTEGER|DOUBLE|BOOLEAN) VAR '=' expr  #VariavelNova
-     | STRING VAR '=' STR  #VariavelNovaString
+     //| STRING VAR '=' STR  #VariavelNovaString
      | VAR '=' STR  #VariavelExistenteString
      ;
 
@@ -61,8 +64,8 @@ rblock:
 rbody:
      line                      # fnBodyLine
      | line rbody               # fnBodyLineMore
-     | RETURN expr EOL           # fnReturnExprLine
-     | RETURN EOL                # fnReturnLine
+     | RETURN expr EOL          # fnReturnExprLine
+     | RETURN EOL               # fnReturnLine
      ;
     
 bexpr: expr RELOP=(EQ|NE|LT|GT|LE|GE) expr
@@ -78,27 +81,29 @@ params: TYPE=(INTEGER|DOUBLE|BOOLEAN|STRING) VAR
      | //vazio
      ;
 
+lib: IMPORT VAR EOL
+   ;
+
 //TOKENS
 WHILE : 'while';
+RETURN : 'return';
+IMPORT : '#import';
 IF : 'if';
 ELSE : 'else';
 EOL : ';';
 PRINT : 'print';
 READ : 'read';
-NUM : [0-9]+;
 INTEGER : 'int';
 DOUBLE : 'double';
 BOOLEAN : 'bool';
 STRING : 'str';
 VOID : 'void';
-VAR : [a-zA-Z]+;
 SUM : '+';
 SUB : '-';
 DIV : '/';
 MULT : '*';
 MOD : '%';
 ASSIGN : '=';
-RETURN : 'return';
 SEP : ',';
 LP : '(';
 RP : ')';
@@ -110,6 +115,8 @@ GT : '>';
 GE : '>=';
 EQ : '==';
 NE : '!=';
+NUM : [0-9]+;
+VAR : [a-zA-Z]+;
 STR : '"' ~[\n"]*'"';
 COMMENT: '//' ~[\r\n]* -> skip;
 WS : [ \t\n\r]+ -> skip;
@@ -144,3 +151,10 @@ WS : [ \t\n\r]+ -> skip;
 //     c = a + b;
 //     return c;
 // }
+
+// -----------------
+// #import a;
+// #import b;
+//  
+// int(b);
+// 
