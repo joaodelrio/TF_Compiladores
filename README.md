@@ -16,7 +16,7 @@ Para compilar o compilador, siga os seguintes passos:
 - Clone o repositório do Github joaodelrio/TF_Compiladores: [Repositório para o trabalho final de compiladores](https://github.com/joaodelrio/TF_Compiladores)
 - Abra um terminal e navegue até o diretório raiz do projeto.
 - Digite o comando `ant jar` para gerar o arquivo JAR do compilador.
-- Para executar o compilador, digite o comando `dotnet run` no terminal. Onde `Lang.g4` é o nome do arquivo que contém o código fonte da linguagem definida pela gramática do compilador.
+- Para executar o compilador, digite o comando `dotnet run` no terminal. Onde `BasicC.g4` é o nome do arquivo que contém o código fonte da linguagem definida pela gramática do compilador.
 
 ## Exemplos
 
