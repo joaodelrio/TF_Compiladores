@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from d:/Compilador TRABALHO FINAL/BasicC.g4 by ANTLR 4.13.1
+// Generated from c:/Users/devma/Downloads/Projetos/Compilador TRABALHO FINAL/BasicC.g4 by ANTLR 4.13.1
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -19,6 +19,7 @@
 // Ambiguous reference in cref attribute
 #pragma warning disable 419
 
+namespace BasicInt.Grammar {
 using Antlr4.Runtime.Misc;
 using Antlr4.Runtime.Tree;
 using IToken = Antlr4.Runtime.IToken;
@@ -55,7 +56,7 @@ public partial class BasicCBaseVisitor<Result> : AbstractParseTreeVisitor<Result
 	/// <return>The visitor result.</return>
 	public virtual Result VisitLine([NotNull] BasicCParser.LineContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>VariavelExistente</c>
+	/// Visit a parse tree produced by the <c>VariavelExistenteString</c>
 	/// labeled alternative in <see cref="BasicCParser.atrib"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -64,18 +65,7 @@ public partial class BasicCBaseVisitor<Result> : AbstractParseTreeVisitor<Result
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitVariavelExistente([NotNull] BasicCParser.VariavelExistenteContext context) { return VisitChildren(context); }
-	/// <summary>
-	/// Visit a parse tree produced by the <c>VariavelNova</c>
-	/// labeled alternative in <see cref="BasicCParser.atrib"/>.
-	/// <para>
-	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
-	/// on <paramref name="context"/>.
-	/// </para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	public virtual Result VisitVariavelNova([NotNull] BasicCParser.VariavelNovaContext context) { return VisitChildren(context); }
+	public virtual Result VisitVariavelExistenteString([NotNull] BasicCParser.VariavelExistenteStringContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by the <c>VariavelNovaString</c>
 	/// labeled alternative in <see cref="BasicCParser.atrib"/>.
@@ -88,7 +78,7 @@ public partial class BasicCBaseVisitor<Result> : AbstractParseTreeVisitor<Result
 	/// <return>The visitor result.</return>
 	public virtual Result VisitVariavelNovaString([NotNull] BasicCParser.VariavelNovaStringContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>VariavelExistenteString</c>
+	/// Visit a parse tree produced by the <c>VariavelNova</c>
 	/// labeled alternative in <see cref="BasicCParser.atrib"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -97,9 +87,10 @@ public partial class BasicCBaseVisitor<Result> : AbstractParseTreeVisitor<Result
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitVariavelExistenteString([NotNull] BasicCParser.VariavelExistenteStringContext context) { return VisitChildren(context); }
+	public virtual Result VisitVariavelNova([NotNull] BasicCParser.VariavelNovaContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="BasicCParser.input"/>.
+	/// Visit a parse tree produced by the <c>VariavelNovaBoolean</c>
+	/// labeled alternative in <see cref="BasicCParser.atrib"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -107,9 +98,10 @@ public partial class BasicCBaseVisitor<Result> : AbstractParseTreeVisitor<Result
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitInput([NotNull] BasicCParser.InputContext context) { return VisitChildren(context); }
+	public virtual Result VisitVariavelNovaBoolean([NotNull] BasicCParser.VariavelNovaBooleanContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="BasicCParser.output"/>.
+	/// Visit a parse tree produced by the <c>VariavelExistente</c>
+	/// labeled alternative in <see cref="BasicCParser.atrib"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -117,9 +109,10 @@ public partial class BasicCBaseVisitor<Result> : AbstractParseTreeVisitor<Result
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitOutput([NotNull] BasicCParser.OutputContext context) { return VisitChildren(context); }
+	public virtual Result VisitVariavelExistente([NotNull] BasicCParser.VariavelExistenteContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="BasicCParser.expr"/>.
+	/// Visit a parse tree produced by the <c>VariavelExistenteBoolean</c>
+	/// labeled alternative in <see cref="BasicCParser.atrib"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -127,9 +120,10 @@ public partial class BasicCBaseVisitor<Result> : AbstractParseTreeVisitor<Result
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitExpr([NotNull] BasicCParser.ExprContext context) { return VisitChildren(context); }
+	public virtual Result VisitVariavelExistenteBoolean([NotNull] BasicCParser.VariavelExistenteBooleanContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="BasicCParser.term"/>.
+	/// Visit a parse tree produced by the <c>inputVar</c>
+	/// labeled alternative in <see cref="BasicCParser.input"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -137,9 +131,10 @@ public partial class BasicCBaseVisitor<Result> : AbstractParseTreeVisitor<Result
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitTerm([NotNull] BasicCParser.TermContext context) { return VisitChildren(context); }
+	public virtual Result VisitInputVar([NotNull] BasicCParser.InputVarContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="BasicCParser.factor"/>.
+	/// Visit a parse tree produced by the <c>outputStr</c>
+	/// labeled alternative in <see cref="BasicCParser.output"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -147,9 +142,10 @@ public partial class BasicCBaseVisitor<Result> : AbstractParseTreeVisitor<Result
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitFactor([NotNull] BasicCParser.FactorContext context) { return VisitChildren(context); }
+	public virtual Result VisitOutputStr([NotNull] BasicCParser.OutputStrContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="BasicCParser.controlflow"/>.
+	/// Visit a parse tree produced by the <c>outputVar</c>
+	/// labeled alternative in <see cref="BasicCParser.output"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -157,9 +153,10 @@ public partial class BasicCBaseVisitor<Result> : AbstractParseTreeVisitor<Result
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitControlflow([NotNull] BasicCParser.ControlflowContext context) { return VisitChildren(context); }
+	public virtual Result VisitOutputVar([NotNull] BasicCParser.OutputVarContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="BasicCParser.loop"/>.
+	/// Visit a parse tree produced by the <c>outputExpr</c>
+	/// labeled alternative in <see cref="BasicCParser.output"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -167,9 +164,10 @@ public partial class BasicCBaseVisitor<Result> : AbstractParseTreeVisitor<Result
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitLoop([NotNull] BasicCParser.LoopContext context) { return VisitChildren(context); }
+	public virtual Result VisitOutputExpr([NotNull] BasicCParser.OutputExprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="BasicCParser.block"/>.
+	/// Visit a parse tree produced by the <c>exprSum</c>
+	/// labeled alternative in <see cref="BasicCParser.expr"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -177,7 +175,161 @@ public partial class BasicCBaseVisitor<Result> : AbstractParseTreeVisitor<Result
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitBlock([NotNull] BasicCParser.BlockContext context) { return VisitChildren(context); }
+	public virtual Result VisitExprSum([NotNull] BasicCParser.ExprSumContext context) { return VisitChildren(context); }
+	/// <summary>
+	/// Visit a parse tree produced by the <c>exprSub</c>
+	/// labeled alternative in <see cref="BasicCParser.expr"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitExprSub([NotNull] BasicCParser.ExprSubContext context) { return VisitChildren(context); }
+	/// <summary>
+	/// Visit a parse tree produced by the <c>exprTerm</c>
+	/// labeled alternative in <see cref="BasicCParser.expr"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitExprTerm([NotNull] BasicCParser.ExprTermContext context) { return VisitChildren(context); }
+	/// <summary>
+	/// Visit a parse tree produced by the <c>termMult</c>
+	/// labeled alternative in <see cref="BasicCParser.term"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitTermMult([NotNull] BasicCParser.TermMultContext context) { return VisitChildren(context); }
+	/// <summary>
+	/// Visit a parse tree produced by the <c>termDiv</c>
+	/// labeled alternative in <see cref="BasicCParser.term"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitTermDiv([NotNull] BasicCParser.TermDivContext context) { return VisitChildren(context); }
+	/// <summary>
+	/// Visit a parse tree produced by the <c>termMod</c>
+	/// labeled alternative in <see cref="BasicCParser.term"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitTermMod([NotNull] BasicCParser.TermModContext context) { return VisitChildren(context); }
+	/// <summary>
+	/// Visit a parse tree produced by the <c>termFactor</c>
+	/// labeled alternative in <see cref="BasicCParser.term"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitTermFactor([NotNull] BasicCParser.TermFactorContext context) { return VisitChildren(context); }
+	/// <summary>
+	/// Visit a parse tree produced by the <c>factorExpr</c>
+	/// labeled alternative in <see cref="BasicCParser.factor"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitFactorExpr([NotNull] BasicCParser.FactorExprContext context) { return VisitChildren(context); }
+	/// <summary>
+	/// Visit a parse tree produced by the <c>factorVar</c>
+	/// labeled alternative in <see cref="BasicCParser.factor"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitFactorVar([NotNull] BasicCParser.FactorVarContext context) { return VisitChildren(context); }
+	/// <summary>
+	/// Visit a parse tree produced by the <c>factorNum</c>
+	/// labeled alternative in <see cref="BasicCParser.factor"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitFactorNum([NotNull] BasicCParser.FactorNumContext context) { return VisitChildren(context); }
+	/// <summary>
+	/// Visit a parse tree produced by the <c>factorStr</c>
+	/// labeled alternative in <see cref="BasicCParser.factor"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitFactorStr([NotNull] BasicCParser.FactorStrContext context) { return VisitChildren(context); }
+	/// <summary>
+	/// Visit a parse tree produced by the <c>ifBlock</c>
+	/// labeled alternative in <see cref="BasicCParser.controlflow"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitIfBlock([NotNull] BasicCParser.IfBlockContext context) { return VisitChildren(context); }
+	/// <summary>
+	/// Visit a parse tree produced by the <c>ifElseBlock</c>
+	/// labeled alternative in <see cref="BasicCParser.controlflow"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitIfElseBlock([NotNull] BasicCParser.IfElseBlockContext context) { return VisitChildren(context); }
+	/// <summary>
+	/// Visit a parse tree produced by the <c>loopBlock</c>
+	/// labeled alternative in <see cref="BasicCParser.loop"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitLoopBlock([NotNull] BasicCParser.LoopBlockContext context) { return VisitChildren(context); }
+	/// <summary>
+	/// Visit a parse tree produced by the <c>blockLine</c>
+	/// labeled alternative in <see cref="BasicCParser.block"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitBlockLine([NotNull] BasicCParser.BlockLineContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by the <c>fnBlockLine</c>
 	/// labeled alternative in <see cref="BasicCParser.rblock"/>.
@@ -212,6 +364,28 @@ public partial class BasicCBaseVisitor<Result> : AbstractParseTreeVisitor<Result
 	/// <return>The visitor result.</return>
 	public virtual Result VisitFnBodyLineMore([NotNull] BasicCParser.FnBodyLineMoreContext context) { return VisitChildren(context); }
 	/// <summary>
+	/// Visit a parse tree produced by the <c>fnReturnBoolLine</c>
+	/// labeled alternative in <see cref="BasicCParser.rbody"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitFnReturnBoolLine([NotNull] BasicCParser.FnReturnBoolLineContext context) { return VisitChildren(context); }
+	/// <summary>
+	/// Visit a parse tree produced by the <c>fnReturnStrLine</c>
+	/// labeled alternative in <see cref="BasicCParser.rbody"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitFnReturnStrLine([NotNull] BasicCParser.FnReturnStrLineContext context) { return VisitChildren(context); }
+	/// <summary>
 	/// Visit a parse tree produced by the <c>fnReturnExprLine</c>
 	/// labeled alternative in <see cref="BasicCParser.rbody"/>.
 	/// <para>
@@ -234,7 +408,8 @@ public partial class BasicCBaseVisitor<Result> : AbstractParseTreeVisitor<Result
 	/// <return>The visitor result.</return>
 	public virtual Result VisitFnReturnLine([NotNull] BasicCParser.FnReturnLineContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="BasicCParser.bexpr"/>.
+	/// Visit a parse tree produced by the <c>bexprRelop</c>
+	/// labeled alternative in <see cref="BasicCParser.bexpr"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -242,9 +417,10 @@ public partial class BasicCBaseVisitor<Result> : AbstractParseTreeVisitor<Result
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitBexpr([NotNull] BasicCParser.BexprContext context) { return VisitChildren(context); }
+	public virtual Result VisitBexprRelop([NotNull] BasicCParser.BexprRelopContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="BasicCParser.function"/>.
+	/// Visit a parse tree produced by the <c>bexprExpr</c>
+	/// labeled alternative in <see cref="BasicCParser.bexpr"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -252,9 +428,10 @@ public partial class BasicCBaseVisitor<Result> : AbstractParseTreeVisitor<Result
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitFunction([NotNull] BasicCParser.FunctionContext context) { return VisitChildren(context); }
+	public virtual Result VisitBexprExpr([NotNull] BasicCParser.BexprExprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="BasicCParser.params"/>.
+	/// Visit a parse tree produced by the <c>fnWithReturn</c>
+	/// labeled alternative in <see cref="BasicCParser.function"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -262,5 +439,115 @@ public partial class BasicCBaseVisitor<Result> : AbstractParseTreeVisitor<Result
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitParams([NotNull] BasicCParser.ParamsContext context) { return VisitChildren(context); }
+	public virtual Result VisitFnWithReturn([NotNull] BasicCParser.FnWithReturnContext context) { return VisitChildren(context); }
+	/// <summary>
+	/// Visit a parse tree produced by the <c>fnWithoutReturn</c>
+	/// labeled alternative in <see cref="BasicCParser.function"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitFnWithoutReturn([NotNull] BasicCParser.FnWithoutReturnContext context) { return VisitChildren(context); }
+	/// <summary>
+	/// Visit a parse tree produced by the <c>uniqueParam</c>
+	/// labeled alternative in <see cref="BasicCParser.params"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitUniqueParam([NotNull] BasicCParser.UniqueParamContext context) { return VisitChildren(context); }
+	/// <summary>
+	/// Visit a parse tree produced by the <c>multipleParams</c>
+	/// labeled alternative in <see cref="BasicCParser.params"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitMultipleParams([NotNull] BasicCParser.MultipleParamsContext context) { return VisitChildren(context); }
+	/// <summary>
+	/// Visit a parse tree produced by the <c>noneParam</c>
+	/// labeled alternative in <see cref="BasicCParser.params"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitNoneParam([NotNull] BasicCParser.NoneParamContext context) { return VisitChildren(context); }
+	/// <summary>
+	/// Visit a parse tree produced by the <c>uniqueParamCall</c>
+	/// labeled alternative in <see cref="BasicCParser.paramsCall"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitUniqueParamCall([NotNull] BasicCParser.UniqueParamCallContext context) { return VisitChildren(context); }
+	/// <summary>
+	/// Visit a parse tree produced by the <c>multipleParamCall</c>
+	/// labeled alternative in <see cref="BasicCParser.paramsCall"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitMultipleParamCall([NotNull] BasicCParser.MultipleParamCallContext context) { return VisitChildren(context); }
+	/// <summary>
+	/// Visit a parse tree produced by the <c>noneParamCall</c>
+	/// labeled alternative in <see cref="BasicCParser.paramsCall"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitNoneParamCall([NotNull] BasicCParser.NoneParamCallContext context) { return VisitChildren(context); }
+	/// <summary>
+	/// Visit a parse tree produced by the <c>funcInvoc</c>
+	/// labeled alternative in <see cref="BasicCParser.callFunction"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitFuncInvoc([NotNull] BasicCParser.FuncInvocContext context) { return VisitChildren(context); }
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="BasicCParser.lib"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitLib([NotNull] BasicCParser.LibContext context) { return VisitChildren(context); }
+	/// <summary>
+	/// Visit a parse tree produced by the <c>typeCast</c>
+	/// labeled alternative in <see cref="BasicCParser.typecast"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitTypeCast([NotNull] BasicCParser.TypeCastContext context) { return VisitChildren(context); }
 }
+} // namespace BasicInt.Grammar

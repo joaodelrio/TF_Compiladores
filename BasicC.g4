@@ -1,3 +1,4 @@
+
 grammar BasicC;
 
 // TYPECAST
@@ -11,47 +12,53 @@ line : atrib EOL
      | controlflow
      | loop
      | function
+     | callFunction EOL
      | lib
+     | typecast EOL
      ;
 
-atrib: VAR '=' expr #VariavelExistente
-     | TYPE=(INTEGER|DOUBLE|BOOLEAN) VAR '=' expr  #VariavelNova
-     //| STRING VAR '=' STR  #VariavelNovaString
-     | VAR '=' STR  #VariavelExistenteString
+atrib : VAR '=' STR  #VariavelExistenteString
+     | STRING VAR '=' STR  #VariavelNovaString
+     | TYPE=(INTEGER|DOUBLE) VAR '=' expr  #VariavelNova
+     | BOOLEAN VAR '=' BOOL  #VariavelNovaBoolean
+     | VAR '=' expr #VariavelExistente 
+     | VAR '=' BOOL #VariavelExistenteBoolean
      ;
 
-input: READ '(' VAR ')'
+input : READ '(' VAR ')'   #inputVar
      ;
 
-output: PRINT '(' STR ')'
-      | PRINT '(' expr ')'
+output: PRINT '(' STR ')'     #outputStr
+      | PRINT '(' VAR ')'    #outputVar
+      | PRINT '(' expr ')'    #outputExpr
       ;
 
-expr : expr '+' expr
-     | expr '-' expr
-     | term
+expr : term '+' expr          #exprSum
+     | term '-' expr          #exprSub
+     | term                   #exprTerm
      ;
 
-term : term '*' term
-     | term '/' term
-     | term '%' term
-     | factor
+term : factor '*' term          #termMult
+     | factor '/' term          #termDiv
+     | factor '%' term          #termMod
+     | factor                 #termFactor
      ;
 
-factor: '(' expr ')'
-      | VAR
-      | NUM
+factor: '(' expr ')'          #factorExpr
+      | VAR                   #factorVar
+      | NUM                   #factorNum
+      | STR                   #factorStr
       ;
 
-controlflow: IF '(' bexpr ')' block
-            | IF '(' bexpr ')' block ELSE block
+controlflow: IF '(' bexpr ')' block    #ifBlock
+            | IF '(' bexpr ')' block ELSE block  #ifElseBlock
             ;
 
-loop: WHILE '(' bexpr ')' block
+loop: WHILE '(' bexpr ')' block    #loopBlock
     ;
 
 
-block: '{' line+ '}'
+block: '{' line+ '}'  #blockLine
      ;
 
 // rblock: '{' line+ RETURN expr EOL '}'
@@ -64,25 +71,38 @@ rblock:
 rbody:
      line                      # fnBodyLine
      | line rbody               # fnBodyLineMore
+     | RETURN BOOL EOL       # fnReturnBoolLine
+     | RETURN STR EOL           # fnReturnStrLine
      | RETURN expr EOL          # fnReturnExprLine
      | RETURN EOL               # fnReturnLine
      ;
     
-bexpr: expr RELOP=(EQ|NE|LT|GT|LE|GE) expr
-     | expr
+bexpr: expr RELOP=(EQ|NE|LT|GT|LE|GE) expr #bexprRelop
+     | expr #bexprExpr
      ;
     
-function: TYPE=(INTEGER|DOUBLE|BOOLEAN|STRING) VAR '('params')' rblock
-          | VOID VAR '('params')' block
+function: TYPE=(INTEGER|DOUBLE|BOOLEAN|STRING) VAR '('params')' rblock     # fnWithReturn
+          | VOID VAR '('params')' rblock                                    # fnWithoutReturn
           ;
 
-params: TYPE=(INTEGER|DOUBLE|BOOLEAN|STRING) VAR
-     | TYPE=(INTEGER|DOUBLE|BOOLEAN|STRING) VAR SEP params
-     | //vazio
+params: TYPE=(INTEGER|DOUBLE|BOOLEAN|STRING) VAR      #uniqueParam         
+     | TYPE=(INTEGER|DOUBLE|BOOLEAN|STRING) VAR SEP params  #multipleParams
+     |                                       # noneParam          
      ;
+
+paramsCall: factor         # uniqueParamCall
+          | factor SEP paramsCall   # multipleParamCall
+          |               # noneParamCall
+          ;
+
+callFunction: VAR '('paramsCall')'         #funcInvoc
+            ;
 
 lib: IMPORT VAR EOL
    ;
+
+typecast: '(' TYPE=(INTEGER|BOOLEAN|STRING) ')' VAR  # typeCast
+        ;
 
 //TOKENS
 WHILE : 'while';
@@ -115,11 +135,14 @@ GT : '>';
 GE : '>=';
 EQ : '==';
 NE : '!=';
+NUMD : [0-9]+ '.' [0-9]+;
+BOOL : 'true' | 'false';
 NUM : [0-9]+;
 VAR : [a-zA-Z]+;
 STR : '"' ~[\n"]*'"';
 COMMENT: '//' ~[\r\n]* -> skip;
 WS : [ \t\n\r]+ -> skip;
+
 
 // ------------------
 // int b = 20;

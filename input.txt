@@ -1,8 +1,50 @@
-#import a;
-#import b;
+//Comandos de entrada e saída
+print("Oi");
+read(a);
+print(a);
 
-int Gafa(){
-    print(a);
-    return 0;
+//Declaração de variaveis
+int b=20;
+bool c=true;
+str d="teste";
+print(b);
+print(c);
+print(d);
+b=1;
+print(b);
+(bool)b;
+print(b);
+
+//Operações matemáticas;
+print((20+48)/8*2);
+
+//Controle de fluxo;
+if(10>2){
+    print("Entrou no If");
 }
+else{
+    print("Entrou no else");
+}
+
+if(10<2){
+    print("Entrou no If");
+}
+else{
+    print("Entrou no else");
+}
+
+//Laços de repetição;
+int i=1;
+while(i<10){
+    print(i);
+    i=i+1;
+}
+
+//Função
+int soma(){
+    print("Entrou na funcao");
+    return 10+2;
+}
+print("Antes da funcao");
+soma();
 

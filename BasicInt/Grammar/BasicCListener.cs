@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from d:/Compilador TRABALHO FINAL/BasicC.g4 by ANTLR 4.13.1
+// Generated from c:/Users/devma/Downloads/Projetos/Compilador TRABALHO FINAL/BasicC.g4 by ANTLR 4.13.1
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -19,6 +19,7 @@
 // Ambiguous reference in cref attribute
 #pragma warning disable 419
 
+namespace BasicInt.Grammar {
 using Antlr4.Runtime.Misc;
 using IParseTreeListener = Antlr4.Runtime.Tree.IParseTreeListener;
 using IToken = Antlr4.Runtime.IToken;
@@ -51,29 +52,17 @@ public interface IBasicCListener : IParseTreeListener {
 	/// <param name="context">The parse tree.</param>
 	void ExitLine([NotNull] BasicCParser.LineContext context);
 	/// <summary>
-	/// Enter a parse tree produced by the <c>VariavelExistente</c>
+	/// Enter a parse tree produced by the <c>VariavelExistenteString</c>
 	/// labeled alternative in <see cref="BasicCParser.atrib"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void EnterVariavelExistente([NotNull] BasicCParser.VariavelExistenteContext context);
+	void EnterVariavelExistenteString([NotNull] BasicCParser.VariavelExistenteStringContext context);
 	/// <summary>
-	/// Exit a parse tree produced by the <c>VariavelExistente</c>
+	/// Exit a parse tree produced by the <c>VariavelExistenteString</c>
 	/// labeled alternative in <see cref="BasicCParser.atrib"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void ExitVariavelExistente([NotNull] BasicCParser.VariavelExistenteContext context);
-	/// <summary>
-	/// Enter a parse tree produced by the <c>VariavelNova</c>
-	/// labeled alternative in <see cref="BasicCParser.atrib"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterVariavelNova([NotNull] BasicCParser.VariavelNovaContext context);
-	/// <summary>
-	/// Exit a parse tree produced by the <c>VariavelNova</c>
-	/// labeled alternative in <see cref="BasicCParser.atrib"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitVariavelNova([NotNull] BasicCParser.VariavelNovaContext context);
+	void ExitVariavelExistenteString([NotNull] BasicCParser.VariavelExistenteStringContext context);
 	/// <summary>
 	/// Enter a parse tree produced by the <c>VariavelNovaString</c>
 	/// labeled alternative in <see cref="BasicCParser.atrib"/>.
@@ -87,97 +76,281 @@ public interface IBasicCListener : IParseTreeListener {
 	/// <param name="context">The parse tree.</param>
 	void ExitVariavelNovaString([NotNull] BasicCParser.VariavelNovaStringContext context);
 	/// <summary>
-	/// Enter a parse tree produced by the <c>VariavelExistenteString</c>
+	/// Enter a parse tree produced by the <c>VariavelNova</c>
 	/// labeled alternative in <see cref="BasicCParser.atrib"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void EnterVariavelExistenteString([NotNull] BasicCParser.VariavelExistenteStringContext context);
+	void EnterVariavelNova([NotNull] BasicCParser.VariavelNovaContext context);
 	/// <summary>
-	/// Exit a parse tree produced by the <c>VariavelExistenteString</c>
+	/// Exit a parse tree produced by the <c>VariavelNova</c>
 	/// labeled alternative in <see cref="BasicCParser.atrib"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void ExitVariavelExistenteString([NotNull] BasicCParser.VariavelExistenteStringContext context);
+	void ExitVariavelNova([NotNull] BasicCParser.VariavelNovaContext context);
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="BasicCParser.input"/>.
+	/// Enter a parse tree produced by the <c>VariavelNovaBoolean</c>
+	/// labeled alternative in <see cref="BasicCParser.atrib"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void EnterInput([NotNull] BasicCParser.InputContext context);
+	void EnterVariavelNovaBoolean([NotNull] BasicCParser.VariavelNovaBooleanContext context);
 	/// <summary>
-	/// Exit a parse tree produced by <see cref="BasicCParser.input"/>.
+	/// Exit a parse tree produced by the <c>VariavelNovaBoolean</c>
+	/// labeled alternative in <see cref="BasicCParser.atrib"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void ExitInput([NotNull] BasicCParser.InputContext context);
+	void ExitVariavelNovaBoolean([NotNull] BasicCParser.VariavelNovaBooleanContext context);
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="BasicCParser.output"/>.
+	/// Enter a parse tree produced by the <c>VariavelExistente</c>
+	/// labeled alternative in <see cref="BasicCParser.atrib"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void EnterOutput([NotNull] BasicCParser.OutputContext context);
+	void EnterVariavelExistente([NotNull] BasicCParser.VariavelExistenteContext context);
 	/// <summary>
-	/// Exit a parse tree produced by <see cref="BasicCParser.output"/>.
+	/// Exit a parse tree produced by the <c>VariavelExistente</c>
+	/// labeled alternative in <see cref="BasicCParser.atrib"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void ExitOutput([NotNull] BasicCParser.OutputContext context);
+	void ExitVariavelExistente([NotNull] BasicCParser.VariavelExistenteContext context);
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="BasicCParser.expr"/>.
+	/// Enter a parse tree produced by the <c>VariavelExistenteBoolean</c>
+	/// labeled alternative in <see cref="BasicCParser.atrib"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void EnterExpr([NotNull] BasicCParser.ExprContext context);
+	void EnterVariavelExistenteBoolean([NotNull] BasicCParser.VariavelExistenteBooleanContext context);
 	/// <summary>
-	/// Exit a parse tree produced by <see cref="BasicCParser.expr"/>.
+	/// Exit a parse tree produced by the <c>VariavelExistenteBoolean</c>
+	/// labeled alternative in <see cref="BasicCParser.atrib"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void ExitExpr([NotNull] BasicCParser.ExprContext context);
+	void ExitVariavelExistenteBoolean([NotNull] BasicCParser.VariavelExistenteBooleanContext context);
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="BasicCParser.term"/>.
+	/// Enter a parse tree produced by the <c>inputVar</c>
+	/// labeled alternative in <see cref="BasicCParser.input"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void EnterTerm([NotNull] BasicCParser.TermContext context);
+	void EnterInputVar([NotNull] BasicCParser.InputVarContext context);
 	/// <summary>
-	/// Exit a parse tree produced by <see cref="BasicCParser.term"/>.
+	/// Exit a parse tree produced by the <c>inputVar</c>
+	/// labeled alternative in <see cref="BasicCParser.input"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void ExitTerm([NotNull] BasicCParser.TermContext context);
+	void ExitInputVar([NotNull] BasicCParser.InputVarContext context);
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="BasicCParser.factor"/>.
+	/// Enter a parse tree produced by the <c>outputStr</c>
+	/// labeled alternative in <see cref="BasicCParser.output"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void EnterFactor([NotNull] BasicCParser.FactorContext context);
+	void EnterOutputStr([NotNull] BasicCParser.OutputStrContext context);
 	/// <summary>
-	/// Exit a parse tree produced by <see cref="BasicCParser.factor"/>.
+	/// Exit a parse tree produced by the <c>outputStr</c>
+	/// labeled alternative in <see cref="BasicCParser.output"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void ExitFactor([NotNull] BasicCParser.FactorContext context);
+	void ExitOutputStr([NotNull] BasicCParser.OutputStrContext context);
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="BasicCParser.controlflow"/>.
+	/// Enter a parse tree produced by the <c>outputVar</c>
+	/// labeled alternative in <see cref="BasicCParser.output"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void EnterControlflow([NotNull] BasicCParser.ControlflowContext context);
+	void EnterOutputVar([NotNull] BasicCParser.OutputVarContext context);
 	/// <summary>
-	/// Exit a parse tree produced by <see cref="BasicCParser.controlflow"/>.
+	/// Exit a parse tree produced by the <c>outputVar</c>
+	/// labeled alternative in <see cref="BasicCParser.output"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void ExitControlflow([NotNull] BasicCParser.ControlflowContext context);
+	void ExitOutputVar([NotNull] BasicCParser.OutputVarContext context);
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="BasicCParser.loop"/>.
+	/// Enter a parse tree produced by the <c>outputExpr</c>
+	/// labeled alternative in <see cref="BasicCParser.output"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void EnterLoop([NotNull] BasicCParser.LoopContext context);
+	void EnterOutputExpr([NotNull] BasicCParser.OutputExprContext context);
 	/// <summary>
-	/// Exit a parse tree produced by <see cref="BasicCParser.loop"/>.
+	/// Exit a parse tree produced by the <c>outputExpr</c>
+	/// labeled alternative in <see cref="BasicCParser.output"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void ExitLoop([NotNull] BasicCParser.LoopContext context);
+	void ExitOutputExpr([NotNull] BasicCParser.OutputExprContext context);
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="BasicCParser.block"/>.
+	/// Enter a parse tree produced by the <c>exprSum</c>
+	/// labeled alternative in <see cref="BasicCParser.expr"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void EnterBlock([NotNull] BasicCParser.BlockContext context);
+	void EnterExprSum([NotNull] BasicCParser.ExprSumContext context);
 	/// <summary>
-	/// Exit a parse tree produced by <see cref="BasicCParser.block"/>.
+	/// Exit a parse tree produced by the <c>exprSum</c>
+	/// labeled alternative in <see cref="BasicCParser.expr"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void ExitBlock([NotNull] BasicCParser.BlockContext context);
+	void ExitExprSum([NotNull] BasicCParser.ExprSumContext context);
+	/// <summary>
+	/// Enter a parse tree produced by the <c>exprSub</c>
+	/// labeled alternative in <see cref="BasicCParser.expr"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterExprSub([NotNull] BasicCParser.ExprSubContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>exprSub</c>
+	/// labeled alternative in <see cref="BasicCParser.expr"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitExprSub([NotNull] BasicCParser.ExprSubContext context);
+	/// <summary>
+	/// Enter a parse tree produced by the <c>exprTerm</c>
+	/// labeled alternative in <see cref="BasicCParser.expr"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterExprTerm([NotNull] BasicCParser.ExprTermContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>exprTerm</c>
+	/// labeled alternative in <see cref="BasicCParser.expr"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitExprTerm([NotNull] BasicCParser.ExprTermContext context);
+	/// <summary>
+	/// Enter a parse tree produced by the <c>termMult</c>
+	/// labeled alternative in <see cref="BasicCParser.term"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterTermMult([NotNull] BasicCParser.TermMultContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>termMult</c>
+	/// labeled alternative in <see cref="BasicCParser.term"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitTermMult([NotNull] BasicCParser.TermMultContext context);
+	/// <summary>
+	/// Enter a parse tree produced by the <c>termDiv</c>
+	/// labeled alternative in <see cref="BasicCParser.term"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterTermDiv([NotNull] BasicCParser.TermDivContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>termDiv</c>
+	/// labeled alternative in <see cref="BasicCParser.term"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitTermDiv([NotNull] BasicCParser.TermDivContext context);
+	/// <summary>
+	/// Enter a parse tree produced by the <c>termMod</c>
+	/// labeled alternative in <see cref="BasicCParser.term"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterTermMod([NotNull] BasicCParser.TermModContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>termMod</c>
+	/// labeled alternative in <see cref="BasicCParser.term"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitTermMod([NotNull] BasicCParser.TermModContext context);
+	/// <summary>
+	/// Enter a parse tree produced by the <c>termFactor</c>
+	/// labeled alternative in <see cref="BasicCParser.term"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterTermFactor([NotNull] BasicCParser.TermFactorContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>termFactor</c>
+	/// labeled alternative in <see cref="BasicCParser.term"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitTermFactor([NotNull] BasicCParser.TermFactorContext context);
+	/// <summary>
+	/// Enter a parse tree produced by the <c>factorExpr</c>
+	/// labeled alternative in <see cref="BasicCParser.factor"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterFactorExpr([NotNull] BasicCParser.FactorExprContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>factorExpr</c>
+	/// labeled alternative in <see cref="BasicCParser.factor"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitFactorExpr([NotNull] BasicCParser.FactorExprContext context);
+	/// <summary>
+	/// Enter a parse tree produced by the <c>factorVar</c>
+	/// labeled alternative in <see cref="BasicCParser.factor"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterFactorVar([NotNull] BasicCParser.FactorVarContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>factorVar</c>
+	/// labeled alternative in <see cref="BasicCParser.factor"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitFactorVar([NotNull] BasicCParser.FactorVarContext context);
+	/// <summary>
+	/// Enter a parse tree produced by the <c>factorNum</c>
+	/// labeled alternative in <see cref="BasicCParser.factor"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterFactorNum([NotNull] BasicCParser.FactorNumContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>factorNum</c>
+	/// labeled alternative in <see cref="BasicCParser.factor"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitFactorNum([NotNull] BasicCParser.FactorNumContext context);
+	/// <summary>
+	/// Enter a parse tree produced by the <c>factorStr</c>
+	/// labeled alternative in <see cref="BasicCParser.factor"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterFactorStr([NotNull] BasicCParser.FactorStrContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>factorStr</c>
+	/// labeled alternative in <see cref="BasicCParser.factor"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitFactorStr([NotNull] BasicCParser.FactorStrContext context);
+	/// <summary>
+	/// Enter a parse tree produced by the <c>ifBlock</c>
+	/// labeled alternative in <see cref="BasicCParser.controlflow"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterIfBlock([NotNull] BasicCParser.IfBlockContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>ifBlock</c>
+	/// labeled alternative in <see cref="BasicCParser.controlflow"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitIfBlock([NotNull] BasicCParser.IfBlockContext context);
+	/// <summary>
+	/// Enter a parse tree produced by the <c>ifElseBlock</c>
+	/// labeled alternative in <see cref="BasicCParser.controlflow"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterIfElseBlock([NotNull] BasicCParser.IfElseBlockContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>ifElseBlock</c>
+	/// labeled alternative in <see cref="BasicCParser.controlflow"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitIfElseBlock([NotNull] BasicCParser.IfElseBlockContext context);
+	/// <summary>
+	/// Enter a parse tree produced by the <c>loopBlock</c>
+	/// labeled alternative in <see cref="BasicCParser.loop"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterLoopBlock([NotNull] BasicCParser.LoopBlockContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>loopBlock</c>
+	/// labeled alternative in <see cref="BasicCParser.loop"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitLoopBlock([NotNull] BasicCParser.LoopBlockContext context);
+	/// <summary>
+	/// Enter a parse tree produced by the <c>blockLine</c>
+	/// labeled alternative in <see cref="BasicCParser.block"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterBlockLine([NotNull] BasicCParser.BlockLineContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>blockLine</c>
+	/// labeled alternative in <see cref="BasicCParser.block"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitBlockLine([NotNull] BasicCParser.BlockLineContext context);
 	/// <summary>
 	/// Enter a parse tree produced by the <c>fnBlockLine</c>
 	/// labeled alternative in <see cref="BasicCParser.rblock"/>.
@@ -215,6 +388,30 @@ public interface IBasicCListener : IParseTreeListener {
 	/// <param name="context">The parse tree.</param>
 	void ExitFnBodyLineMore([NotNull] BasicCParser.FnBodyLineMoreContext context);
 	/// <summary>
+	/// Enter a parse tree produced by the <c>fnReturnBoolLine</c>
+	/// labeled alternative in <see cref="BasicCParser.rbody"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterFnReturnBoolLine([NotNull] BasicCParser.FnReturnBoolLineContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>fnReturnBoolLine</c>
+	/// labeled alternative in <see cref="BasicCParser.rbody"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitFnReturnBoolLine([NotNull] BasicCParser.FnReturnBoolLineContext context);
+	/// <summary>
+	/// Enter a parse tree produced by the <c>fnReturnStrLine</c>
+	/// labeled alternative in <see cref="BasicCParser.rbody"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterFnReturnStrLine([NotNull] BasicCParser.FnReturnStrLineContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>fnReturnStrLine</c>
+	/// labeled alternative in <see cref="BasicCParser.rbody"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitFnReturnStrLine([NotNull] BasicCParser.FnReturnStrLineContext context);
+	/// <summary>
 	/// Enter a parse tree produced by the <c>fnReturnExprLine</c>
 	/// labeled alternative in <see cref="BasicCParser.rbody"/>.
 	/// </summary>
@@ -239,33 +436,158 @@ public interface IBasicCListener : IParseTreeListener {
 	/// <param name="context">The parse tree.</param>
 	void ExitFnReturnLine([NotNull] BasicCParser.FnReturnLineContext context);
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="BasicCParser.bexpr"/>.
+	/// Enter a parse tree produced by the <c>bexprRelop</c>
+	/// labeled alternative in <see cref="BasicCParser.bexpr"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void EnterBexpr([NotNull] BasicCParser.BexprContext context);
+	void EnterBexprRelop([NotNull] BasicCParser.BexprRelopContext context);
 	/// <summary>
-	/// Exit a parse tree produced by <see cref="BasicCParser.bexpr"/>.
+	/// Exit a parse tree produced by the <c>bexprRelop</c>
+	/// labeled alternative in <see cref="BasicCParser.bexpr"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void ExitBexpr([NotNull] BasicCParser.BexprContext context);
+	void ExitBexprRelop([NotNull] BasicCParser.BexprRelopContext context);
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="BasicCParser.function"/>.
+	/// Enter a parse tree produced by the <c>bexprExpr</c>
+	/// labeled alternative in <see cref="BasicCParser.bexpr"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void EnterFunction([NotNull] BasicCParser.FunctionContext context);
+	void EnterBexprExpr([NotNull] BasicCParser.BexprExprContext context);
 	/// <summary>
-	/// Exit a parse tree produced by <see cref="BasicCParser.function"/>.
+	/// Exit a parse tree produced by the <c>bexprExpr</c>
+	/// labeled alternative in <see cref="BasicCParser.bexpr"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void ExitFunction([NotNull] BasicCParser.FunctionContext context);
+	void ExitBexprExpr([NotNull] BasicCParser.BexprExprContext context);
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="BasicCParser.params"/>.
+	/// Enter a parse tree produced by the <c>fnWithReturn</c>
+	/// labeled alternative in <see cref="BasicCParser.function"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void EnterParams([NotNull] BasicCParser.ParamsContext context);
+	void EnterFnWithReturn([NotNull] BasicCParser.FnWithReturnContext context);
 	/// <summary>
-	/// Exit a parse tree produced by <see cref="BasicCParser.params"/>.
+	/// Exit a parse tree produced by the <c>fnWithReturn</c>
+	/// labeled alternative in <see cref="BasicCParser.function"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void ExitParams([NotNull] BasicCParser.ParamsContext context);
+	void ExitFnWithReturn([NotNull] BasicCParser.FnWithReturnContext context);
+	/// <summary>
+	/// Enter a parse tree produced by the <c>fnWithoutReturn</c>
+	/// labeled alternative in <see cref="BasicCParser.function"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterFnWithoutReturn([NotNull] BasicCParser.FnWithoutReturnContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>fnWithoutReturn</c>
+	/// labeled alternative in <see cref="BasicCParser.function"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitFnWithoutReturn([NotNull] BasicCParser.FnWithoutReturnContext context);
+	/// <summary>
+	/// Enter a parse tree produced by the <c>uniqueParam</c>
+	/// labeled alternative in <see cref="BasicCParser.params"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterUniqueParam([NotNull] BasicCParser.UniqueParamContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>uniqueParam</c>
+	/// labeled alternative in <see cref="BasicCParser.params"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitUniqueParam([NotNull] BasicCParser.UniqueParamContext context);
+	/// <summary>
+	/// Enter a parse tree produced by the <c>multipleParams</c>
+	/// labeled alternative in <see cref="BasicCParser.params"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterMultipleParams([NotNull] BasicCParser.MultipleParamsContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>multipleParams</c>
+	/// labeled alternative in <see cref="BasicCParser.params"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitMultipleParams([NotNull] BasicCParser.MultipleParamsContext context);
+	/// <summary>
+	/// Enter a parse tree produced by the <c>noneParam</c>
+	/// labeled alternative in <see cref="BasicCParser.params"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterNoneParam([NotNull] BasicCParser.NoneParamContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>noneParam</c>
+	/// labeled alternative in <see cref="BasicCParser.params"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitNoneParam([NotNull] BasicCParser.NoneParamContext context);
+	/// <summary>
+	/// Enter a parse tree produced by the <c>uniqueParamCall</c>
+	/// labeled alternative in <see cref="BasicCParser.paramsCall"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterUniqueParamCall([NotNull] BasicCParser.UniqueParamCallContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>uniqueParamCall</c>
+	/// labeled alternative in <see cref="BasicCParser.paramsCall"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitUniqueParamCall([NotNull] BasicCParser.UniqueParamCallContext context);
+	/// <summary>
+	/// Enter a parse tree produced by the <c>multipleParamCall</c>
+	/// labeled alternative in <see cref="BasicCParser.paramsCall"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterMultipleParamCall([NotNull] BasicCParser.MultipleParamCallContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>multipleParamCall</c>
+	/// labeled alternative in <see cref="BasicCParser.paramsCall"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitMultipleParamCall([NotNull] BasicCParser.MultipleParamCallContext context);
+	/// <summary>
+	/// Enter a parse tree produced by the <c>noneParamCall</c>
+	/// labeled alternative in <see cref="BasicCParser.paramsCall"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterNoneParamCall([NotNull] BasicCParser.NoneParamCallContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>noneParamCall</c>
+	/// labeled alternative in <see cref="BasicCParser.paramsCall"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitNoneParamCall([NotNull] BasicCParser.NoneParamCallContext context);
+	/// <summary>
+	/// Enter a parse tree produced by the <c>funcInvoc</c>
+	/// labeled alternative in <see cref="BasicCParser.callFunction"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterFuncInvoc([NotNull] BasicCParser.FuncInvocContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>funcInvoc</c>
+	/// labeled alternative in <see cref="BasicCParser.callFunction"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitFuncInvoc([NotNull] BasicCParser.FuncInvocContext context);
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="BasicCParser.lib"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterLib([NotNull] BasicCParser.LibContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="BasicCParser.lib"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitLib([NotNull] BasicCParser.LibContext context);
+	/// <summary>
+	/// Enter a parse tree produced by the <c>typeCast</c>
+	/// labeled alternative in <see cref="BasicCParser.typecast"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterTypeCast([NotNull] BasicCParser.TypeCastContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>typeCast</c>
+	/// labeled alternative in <see cref="BasicCParser.typecast"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitTypeCast([NotNull] BasicCParser.TypeCastContext context);
 }
+} // namespace BasicInt.Grammar
