@@ -69,13 +69,35 @@ while(i<10){
 ```
 ## Funções
 ```csharp
-int soma(){
+void function(){
     print("Entrou na funcao");
-    return 10+2;
 }
 print("Antes da funcao");
-soma();
+function();
+
+void function(){
+    int a =20;
+    print(a);
+}
+
+function();
+print(a);
 ```
+## Coisas mais
+```csharp
+int valor=20;
+typeof(valor);
+(str) valor;
+typeof(valor);
+
+
+10>5 ? {
+    print("é maior");
+} : {
+    print("é menor");
+};
+```
+
 ## Conclusão
 Em suma, desenvolver este compilador foi uma jornada desafiadora e gratificante. Ao longo do processo, aprendemos muito sobre compiladores, linguagens de programação e trabalho em equipe. Enfrentamos diversos obstáculos, mas conseguimos superá-los com determinação e colaboração. Este projeto nos proporcionou uma compreensão mais profunda dos conceitos fundamentais da computação
 e nos preparou para enfrentar futuros desafios com confiança. Estamos orgulhosos do trabalho realizado e ansiosos para aplicar o que aprendemos em projetos futuros. Agradecemos a todos os envolvidos neste processo e esperamos que nosso compilador seja útil para a comunidade de desenvolvedores.
