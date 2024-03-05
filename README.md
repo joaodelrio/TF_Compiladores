@@ -20,9 +20,8 @@ Para compilar o compilador, siga os seguintes passos:
 
 ## Exemplos
 
-##Comandos de entrada e saída
+## Comandos de entrada e saída
 ```csharp
-##Comandos de entrada e saída
 print("Oi");
 read(a);
 print(a);
