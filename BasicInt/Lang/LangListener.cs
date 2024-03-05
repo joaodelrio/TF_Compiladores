@@ -213,5 +213,16 @@ namespace Lang
                 ErrorMessages.Add("Variável inexistente, crie ela primeiro");
             }
         }
+
+        public override void ExitTypeOfVar([NotNull] BasicCParser.TypeOfVarContext context)
+        {
+            var varName = context.VAR().GetText();
+
+            if (!Variables.Contains(varName))
+            {
+                HasErrors = true;
+                ErrorMessages.Add("Variável inexistente, crie ela primeiro");
+            }
+        }
     }
 }

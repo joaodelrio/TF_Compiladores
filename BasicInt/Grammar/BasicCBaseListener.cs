@@ -688,6 +688,34 @@ public partial class BasicCBaseListener : IBasicCListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitTypeCast([NotNull] BasicCParser.TypeCastContext context) { }
+	/// <summary>
+	/// Enter a parse tree produced by the <c>typeOfVar</c>
+	/// labeled alternative in <see cref="BasicCParser.typeof"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterTypeOfVar([NotNull] BasicCParser.TypeOfVarContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by the <c>typeOfVar</c>
+	/// labeled alternative in <see cref="BasicCParser.typeof"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitTypeOfVar([NotNull] BasicCParser.TypeOfVarContext context) { }
+	/// <summary>
+	/// Enter a parse tree produced by the <c>ternaryCond</c>
+	/// labeled alternative in <see cref="BasicCParser.ternary"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterTernaryCond([NotNull] BasicCParser.TernaryCondContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by the <c>ternaryCond</c>
+	/// labeled alternative in <see cref="BasicCParser.ternary"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitTernaryCond([NotNull] BasicCParser.TernaryCondContext context) { }
 
 	/// <inheritdoc/>
 	/// <remarks>The default implementation does nothing.</remarks>

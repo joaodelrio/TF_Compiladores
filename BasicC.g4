@@ -15,6 +15,8 @@ line : atrib EOL
      | callFunction EOL
      | lib
      | typecast EOL
+     | typeof EOL
+     | ternary EOL
      ;
 
 atrib : VAR '=' STR  #VariavelExistenteString
@@ -104,10 +106,18 @@ lib: IMPORT VAR EOL
 typecast: '(' TYPE=(INTEGER|BOOLEAN|STRING) ')' VAR  # typeCast
         ;
 
+typeof: TYPEOF '(' VAR ')'    # typeOfVar
+     ;
+
+ternary:
+        bexpr '?' e1=block ':' e2=block # ternaryCond
+        ;
+
 //TOKENS
 WHILE : 'while';
 RETURN : 'return';
 IMPORT : '#import';
+TYPEOF : 'typeof';
 IF : 'if';
 ELSE : 'else';
 EOL : ';';

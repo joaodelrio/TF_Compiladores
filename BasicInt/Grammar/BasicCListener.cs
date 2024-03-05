@@ -589,5 +589,29 @@ public interface IBasicCListener : IParseTreeListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	void ExitTypeCast([NotNull] BasicCParser.TypeCastContext context);
+	/// <summary>
+	/// Enter a parse tree produced by the <c>typeOfVar</c>
+	/// labeled alternative in <see cref="BasicCParser.typeof"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterTypeOfVar([NotNull] BasicCParser.TypeOfVarContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>typeOfVar</c>
+	/// labeled alternative in <see cref="BasicCParser.typeof"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitTypeOfVar([NotNull] BasicCParser.TypeOfVarContext context);
+	/// <summary>
+	/// Enter a parse tree produced by the <c>ternaryCond</c>
+	/// labeled alternative in <see cref="BasicCParser.ternary"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterTernaryCond([NotNull] BasicCParser.TernaryCondContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>ternaryCond</c>
+	/// labeled alternative in <see cref="BasicCParser.ternary"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitTernaryCond([NotNull] BasicCParser.TernaryCondContext context);
 }
 } // namespace BasicInt.Grammar

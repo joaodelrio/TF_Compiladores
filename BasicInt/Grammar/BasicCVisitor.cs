@@ -358,5 +358,19 @@ public interface IBasicCVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
 	Result VisitTypeCast([NotNull] BasicCParser.TypeCastContext context);
+	/// <summary>
+	/// Visit a parse tree produced by the <c>typeOfVar</c>
+	/// labeled alternative in <see cref="BasicCParser.typeof"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitTypeOfVar([NotNull] BasicCParser.TypeOfVarContext context);
+	/// <summary>
+	/// Visit a parse tree produced by the <c>ternaryCond</c>
+	/// labeled alternative in <see cref="BasicCParser.ternary"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitTernaryCond([NotNull] BasicCParser.TernaryCondContext context);
 }
 } // namespace BasicInt.Grammar

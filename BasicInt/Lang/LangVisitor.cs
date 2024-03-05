@@ -579,6 +579,20 @@ namespace Lang
             return null;
         }
 
+        public override object? VisitTernaryCond([NotNull] BasicCParser.TernaryCondContext context)
+        {
+            var condition = Visit(context.bexpr());
+            if (condition != null && (bool)condition)
+            {
+                Visit(context.block(0));
+            }
+            else
+            {
+                Visit(context.block(1));
+            }
+            return null;
+        }
+
 
         public override object? VisitBexprRelop([NotNull] BasicCParser.BexprRelopContext context)
         {
@@ -683,6 +697,32 @@ namespace Lang
             return null;
         }
 
+        public override object VisitTypeOfVar([NotNull] BasicCParser.TypeOfVarContext context)
+        {
+            var varName = context.VAR().GetText();
+            var variableAttributes = (VariableAttributes)Variables[varName];
+            switch(variableAttributes.GetType())
+            {
+                case BasicCLexer.STRING:
+                    Console.WriteLine("STRING");
+                    break;
+                case BasicCLexer.INTEGER:
+                    Console.WriteLine("INTEGER");
+                    break;
+                case BasicCLexer.BOOLEAN:
+                    Console.WriteLine("BOOLEAN");
+                    break;
+                case BasicCLexer.DOUBLE:
+                    Console.WriteLine("DOUBLE");
+                    break;
+                default:
+                    Console.WriteLine("Tipo não encontrado");
+                    break;
+
+            }
+
+            return null;
+        }
 
         #endregion
 
